@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="UpgradeScripts\Feature.2026-02-08.01.Install.sql" />
+    <None Remove="UpgradeScripts\Feature.2026-02-08.01.Uninstall.sql" />
+    <None Remove="UpgradeScripts\Feature.2026-02-14.01.Install.sql" />
+    <None Remove="UpgradeScripts\Feature.2026-02-14.01.Uninstall.sql" />
+    <None Remove="UpgradeScripts\Feature.2026-02-16.01.Install.sql" />
+    <None Remove="UpgradeScripts\Feature.2026-02-16.01.Uninstall.sql" />
+    <None Remove="UpgradeScripts\Feature.2026-02-17.01.Install.sql" />
+    <None Remove="UpgradeScripts\Feature.2026-02-17.01.Uninstall.sql" />
+    <None Remove="UpgradeScripts\Standard.2025-11-15.01.Install.sql" />
+    <None Remove="UpgradeScripts\Standard.2025-11-15.01.Uninstall.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="UpgradeScripts\Feature.2025-11-19.01.Install.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2025-11-19.01.Uninstall.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-08.01.Install.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-08.01.Uninstall.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-14.01.Install.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-14.01.Uninstall.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-16.01.Install.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-16.01.Uninstall.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-17.01.Install.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-17.01.Uninstall.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Standard.2025-11-15.01.Install.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Standard.2025-11-15.01.Uninstall.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.11" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="9.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DungeonMasterToolkit.Common\DungeonMasterToolkit.Common.csproj" />
+  </ItemGroup>
+
+</Project>

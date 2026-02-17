@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS [AspNetRoleClaims];
+GO
+
+DROP TABLE IF EXISTS [AspNetUserClaims];
+GO
+
+DROP TABLE IF EXISTS [AspNetUserLogins];
+GO
+
+DROP TABLE IF EXISTS [AspNetUserRoles];
+GO
+
+DROP TABLE IF EXISTS [AspNetUserTokens];
+GO
+
+DROP TABLE IF EXISTS [AspNetRoles];
+GO
+
+DROP TABLE IF EXISTS [AspNetUsers];
+GO
