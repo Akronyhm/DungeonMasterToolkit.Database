@@ -20,6 +20,9 @@ public class X_Character : IFluentModel
             .Property(x => x.IsAlive).HasDefaultValue(true);
 
         modelBuilder.Entity<X_Character>()
+            .Property(x => x.VisionLevel).HasDefaultValue(1);
+
+        modelBuilder.Entity<X_Character>()
             .Property(x => x.Disposition)
             .HasDefaultValue(DispositionEnum.Neutral)
             .HasSentinel(DispositionEnum.Undefined)
@@ -52,6 +55,7 @@ public class X_Character : IFluentModel
     public string Name { get; set; } = "";
     public string? Description { get; set; }
     public bool IsAlive { get; set; } = true;
+    public int VisionLevel { get; set; }
     public DispositionEnum Disposition { get; set; }
     public long X_Campaign_Id { get; set; }
     public Guid CharacterId { get; set; }

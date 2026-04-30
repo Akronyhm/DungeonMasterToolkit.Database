@@ -17,6 +17,9 @@ public class X_Organization : IFluentModel
             .Property(x => x.Id).ValueGeneratedOnAdd();
 
         modelBuilder.Entity<X_Organization>()
+            .Property(x => x.VisionLevel).HasDefaultValue(1);
+
+        modelBuilder.Entity<X_Organization>()
             .Property(x => x.Disposition)
             .HasDefaultValue(DispositionEnum.Neutral)
             .HasSentinel(DispositionEnum.Undefined)
@@ -49,6 +52,7 @@ public class X_Organization : IFluentModel
     public long Id { get; set; }
     public string Name { get; set; } = "";
     public string? Description { get; set; }
+    public int VisionLevel { get; set; }
     public DispositionEnum Disposition { get; set; }
     public long X_Campaign_Id { get; set; }
     public Guid OrganizationId { get; set; }

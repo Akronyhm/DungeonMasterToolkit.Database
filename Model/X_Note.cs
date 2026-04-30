@@ -16,6 +16,16 @@ public class X_Note : IFluentModel
             .Property(x => x.Id).ValueGeneratedOnAdd();
 
         modelBuilder.Entity<X_Note>()
+            .Property(x => x.VisionLevel)
+            .HasDefaultValue(1)
+            .ValueGeneratedOnAdd();
+
+        modelBuilder.Entity<X_Note>()
+            .Property(x => x.IsGlobalNote)
+            .HasDefaultValue(false)
+            .ValueGeneratedOnAdd();
+
+        modelBuilder.Entity<X_Note>()
             .Property(x=>x.NoteId)
             .HasDefaultValueSql("NEWSEQUENTIALID()")
             .ValueGeneratedOnAdd()
@@ -39,6 +49,9 @@ public class X_Note : IFluentModel
     public string? Text { get; set; }
     public long X_Campaign_Id { get; set; }
     public DateTimeOffset Created { get; set; }
+
+    public int VisionLevel { get; set; }
+    public bool IsGlobalNote { get; set; }
 
     public virtual X_Campaign X_Campaign { get; set; } = default!;
 }

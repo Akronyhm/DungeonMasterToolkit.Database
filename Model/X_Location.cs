@@ -16,6 +16,9 @@ public class X_Location : IFluentModel
             .Property(x => x.Id).ValueGeneratedOnAdd();
 
         modelBuilder.Entity<X_Location>()
+            .Property(x => x.VisionLevel).HasDefaultValue(1);
+
+        modelBuilder.Entity<X_Location>()
             .Property(x => x.Created)
             .HasDefaultValueSql("sysdatetimeoffset()")
             .ValueGeneratedOnAdd()
@@ -42,6 +45,7 @@ public class X_Location : IFluentModel
     public string Name { get; set; } = "";
     public string? Description { get; set; }
     public long X_Campaign_Id { get; set; }
+    public int VisionLevel { get; set; }
     public Guid LocationId { get; set; }
     public DateTimeOffset Created { get; set; }
     public virtual X_Campaign X_Campaign { get; set; } = default!;

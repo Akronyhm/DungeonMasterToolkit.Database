@@ -20,6 +20,8 @@ public class X_Campaign_AspNetUser : IFluentModel
             .HasDefaultValue(CampaignAccessLevelEnum.Member)
             .HasSentinel(CampaignAccessLevelEnum.Unspecified)
             .IsRequired();
+        created.Property(x => x.UserVisionLevel)
+            .HasDefaultValue(10);
         created.Property(x => x.Created)
             .HasDefaultValueSql("sysdatetimeoffset()")
             .ValueGeneratedOnAdd()
@@ -38,6 +40,7 @@ public class X_Campaign_AspNetUser : IFluentModel
 
     public long X_Campaign_Id { get; set; }
     public string AspNetUsers_Id { get; set; } = "";
+    public int UserVisionLevel { get; set; } = 10;
     public CampaignAccessLevelEnum AccessLevel { get; set; } = CampaignAccessLevelEnum.Unspecified;
     public DateTimeOffset Created { get; set; }
     public virtual X_Campaign X_Campaign { get; set; } = default!;
