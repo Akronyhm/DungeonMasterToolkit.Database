@@ -15,6 +15,8 @@
     <None Remove="UpgradeScripts\Feature.2026-02-16.01.Uninstall.sql" />
     <None Remove="UpgradeScripts\Feature.2026-02-17.01.Install.sql" />
     <None Remove="UpgradeScripts\Feature.2026-02-17.01.Uninstall.sql" />
+    <None Remove="UpgradeScripts\Feature.2026-04-29.01.Install.sql" />
+    <None Remove="UpgradeScripts\Feature.2026-04-29.01.Uninstall.sql" />
     <None Remove="UpgradeScripts\Standard.2025-11-15.01.Install.sql" />
     <None Remove="UpgradeScripts\Standard.2025-11-15.01.Uninstall.sql" />
   </ItemGroup>
@@ -30,6 +32,8 @@
     <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-16.01.Uninstall.sql" />
     <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-17.01.Install.sql" />
     <EmbeddedResource Include="UpgradeScripts\Feature.2026-02-17.01.Uninstall.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-04-29.01.Install.sql" />
+    <EmbeddedResource Include="UpgradeScripts\Feature.2026-04-29.01.Uninstall.sql" />
     <EmbeddedResource Include="UpgradeScripts\Standard.2025-11-15.01.Install.sql" />
     <EmbeddedResource Include="UpgradeScripts\Standard.2025-11-15.01.Uninstall.sql" />
   </ItemGroup>
